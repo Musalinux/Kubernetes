@@ -7,4 +7,24 @@ kubectl delete replicaset <name> #deleting replicaset
 kubectl edit replicaset new-replica-set #To scale
 kubectl create -f deployment-definition-1.yaml #Creates a deployement
 
+#Services
+vi service-definition-1.yaml 
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: webapp
+spec:
+  type: NodePort
+  ports: 
+    - targetPort: 8080
+      port: 8080
+      nodePort: 30080
+  selector: 
+    name: simple-webapp
+:wq
+
+kubectl create -f service-definition-1.yaml
+#Done
+
 

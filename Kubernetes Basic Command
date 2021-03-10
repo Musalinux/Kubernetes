@@ -1,0 +1,2 @@
+kubectl get nodes 
+kubectl get nodes -o wide #Shows all info about nodes and gives us the underlying Operating system 

@@ -27,4 +27,5 @@ spec:
 kubectl create -f service-definition-1.yaml
 #Done
 
+#Namespaces: kubectl get pods --all-namespaces 
 

@@ -1,0 +1,56 @@
+#Namespaces: kubectl get pods --all-namespaces 
+kubectl run nginx-pod --image=nginx:alpine 
+ls
+kubectl run redis --image=redis:alpine --dry-run=client -oyaml > redis-pod.yaml
+ls
+vi redis-pod.yaml 
+kubectl apply -f redis-pod.yaml 
+cat sample.yaml 
+vi sample.yaml 
+kubectl get service
+ls
+kubectl create service
+   16  kubectl expose pod redis --port:6379 --name redis-service 
+   17  kubectl expose pod redis --port=6379 --name redis-service 
+   18  kubectl create -f deployment --name webapp --image=kodecloud/web-app-color --replicas=3
+   19  kubectl create -f deployment webapp --image=kodecloud/web-app-color --replicas=3
+   20  kubectl create deployment webapp --image=kodecloud/web-app-color --replicas=3
+   21  kubectl create deployment webapp --image=kodecloud/webapp-color --replicas=3
+   22  kubectl delete -f webapp
+   23  kubectl delete deployments -f webapp
+   24  kubectl get deployments.apps 
+   25  kubectl delete -f webapp
+   26  kubectl delete deployments webapp
+   27  kubectl get depl
+   28  kubectl get deployments.apps 
+   29  kubectl create deployment webapp --image=kodecloud/webapp-color --replicas=3
+   30  kubectl get deployments.apps 
+   31  kubectl delete deployments webapp
+   32  kubectl create deployment webapp --image=kodekloud/webapp-color --replicas=3
+   33  kubectl expose pod custom-nginx --port=8080 --image=nginx
+   34  kubectl expose pod -f custom-nginx --port=8080 --image=nginx
+   35  kubectl run custom-nginx --port=8080 --image=nginx
+   36  kubectl create namespace --name=dev-ns
+   37  kubectl create ns dev-ns
+   38  kubectl create deployment redis-deploy --image=redis --replicas=2 ns dev-ns
+   39  kubectl create deployment redis-deploy --image=redis ns dev-ns --replicas=2
+   40  kubectl create deployment redis-deploy --image=redis --namespace=dev-ns --dry-run=client -oyaml > deploy.yaml
+   41  ls
+   42  cat deploy.yaml 
+   43  vi deploy.yaml 
+   44  kubectl apply -f deploy.yaml 
+   45  history 
+   46  kubectl create httpd --image=https:alpine
+   47  kubectl create pod httpd --image=httpd:alpine
+   48  kubect run  httpd --image=httpd:alpine
+   49  kubectl run  httpd --image=httpd:alpine
+   50  ls
+   51  cat redis-pod.yaml 
+   52  kubectl create service 
+   53  kubectl create service -help
+   54  kubectl create service clusterip
+   55  kubectl run  httpd --image=httpd:alpine --port=80 --expose
+   56  kubectl delete httpd
+   57  kubectl delete pods httpd
+   58  kubectl run  httpd --image=httpd:alpine --port=80 --expose
+   59  history 
